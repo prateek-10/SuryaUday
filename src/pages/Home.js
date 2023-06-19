@@ -7,7 +7,8 @@ import FitnessEvaluater from '../components/FitnessEvaluater'
 
 const Home = () => {
   return (
-    <Box>
+    <Box
+    sx={{ml: '0px'}}>
       <HeroBanner/>
       <MembershipCard/>
       <FitnessEvaluater/>
