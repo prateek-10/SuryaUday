@@ -11,6 +11,9 @@ import Sign_up from './pages/Sign_up';
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { ParallaxProvider } from 'react-scroll-parallax';
+
+
 const App = () => {
   return (
     <Box width="400 px" sx={{width: {xl: '1488px'}}} m="auto">
