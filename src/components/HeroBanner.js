@@ -11,7 +11,7 @@ const HeroBanner = () => {
       sx={{ backgroundColor: 'lightblue', gap: { sm: '280px', xs: '40px' }, mt: { sm: '10px', xs: '6px' }, padding: '0px' }} px="20px" >
       <Box display='flex'
         flexDirection='row'
-        sx={{ ml: 0 }}>
+        sx={{ ml: 0}}>
         <img src={heroimg} style={{ width: '40vw', height: '80vh', backgroundColor: 'transparent' }} />
         <Typography
           color='#67042a' fontWeight="600" fontSize="50px" fontFamily='Anton' alignItems='center' paddingTop='100px' display="flex" flexDirection="column" >
@@ -37,8 +37,8 @@ const HeroBanner = () => {
         </a>
       </Stack>
       <Stack
-      style={{display: 'flex',justifyContent: 'flex-end'}}>
-        <img src={AbtUsImg1} style={{ width: '60vw', height: '80vh', paddingTop: '100px', paddingLeft: '200px', justifyContent: 'center'}}/>
+      style={{display: 'flex',justifyContent: 'flex-end', marginTop: '50px'}}>
+        <img src={AbtUsImg1} style={{ width: '60vw', height: '80vh',paddingTop: '100px', paddingLeft: '200px', justifyContent: 'center'}}/>
         <Typography
         display='inline'
         color='#67042a' fontWeight="600" fontSize="26px"  fontFamily='Anton' style={{alignItems: 'center',

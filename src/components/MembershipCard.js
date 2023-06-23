@@ -7,7 +7,7 @@ import pricing3 from '../assets/icons/pricing3.png'
 const MembershipCard = () => {
   return (
    <Stack
-   style={{display: 'flex', justifyContent: 'space-around', marginTop: '0px', padding: '120px' }}
+   style={{display: 'flex', justifyContent: 'space-around', marginTop: '0px', paddingTop: '100px', paddingBottom: '40px' }}
    direction='row'>
     <Box
     style={{justifyContent:'center',backgroundColor: 'black', padding: '30px' }}>
@@ -27,7 +27,7 @@ const MembershipCard = () => {
       </Typography>
       <Typography>
         <ul
-        style={{color: 'hsl(180, 4%, hsl(180, 4%, 72%)', listStyle: 'none'}}>
+        style={{color: 'hsl(180, 4%, 72%)', listStyle: 'none'}}>
           <li
           style={{marginBottom: '5px'}}>Access to gym facilities 5 days a week</li>
           <li
