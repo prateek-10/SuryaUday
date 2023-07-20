@@ -2,7 +2,6 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  width: vw;
 }
 body {
     font-family: 'Josefin Sans';
@@ -47,4 +46,3 @@ body {
   .back {
     transform: rotateY(180deg);
   }
-  

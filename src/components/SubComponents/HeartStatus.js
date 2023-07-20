@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function HealthStatus() {
-  const [value1, setValue1] = useState('lmao');
+  const [value1, setValue1] = useState('');
   const [value2, setValue2] = useState('');
   const [value3, setValue3] = useState('')
   const [isFlipped, setIsFlipped] = useState(false);
@@ -28,8 +28,6 @@ function HealthStatus() {
     const range3Min = 0;
     const range3Max = 80;
 
-
-    // Compare value1 with range1
     if (value1 >= range1Min && value1 <= range1Max) {
       setHealthStatus1('Healthy');
     } else if (value1 < range1Min) {
@@ -38,7 +36,6 @@ function HealthStatus() {
       setHealthStatus1('Unhealthy (Above range)');
     }
 
-    // Compare value2 with range2
     if (value2 >= range2Min && value2 <= range2Max) {
       setHealthStatus2('Healthy');
     } else if (value2 < range2Min) {
@@ -69,43 +66,50 @@ function HealthStatus() {
   };
 
   return (
-    <div className="container">
+    <div className="container" style={{ marginTop: '10px', display: 'flex', direction: 'column' ,justifyContent: 'space-between'}}>
     <div
       className={`box ${isFlipped ? 'flipped' : ''}`}
     >
-      <div className="flipper">
+      <div className="flipper" style={{width: '300px'}}>
         <div className="front">
-          <label>
-            Value 1:
+          <label style={{fontSize: '20px'}}>
+            Time Elapsed in Step Test:
             <br/>
             <input
+              placeholder="Enter the time in minutes"
               type="number"
               value={value1}
               onChange={handleValue1Change}
-            />
+              style={{marginBottom: '20px', width: '320px', height: '30px'}}
+              />
           </label>
           <br />
-          <label>
-            Value 2:
+          <label  style={{fontSize: '20px'}}>
+            Systolic Pressure:
             <br/>
             <input
+              placeholder='mmHg'
               type="number"
               value={value2}
               onChange={handleValue2Change}
+              style={{marginBottom: '20px', width: '320px', height: '30px'}}
             />
           </label>
           <br />
-          <label>
-            Value 3:
+          <label  style={{fontSize: '20px'}}>
+            Diastolic Pressure:
             <br/>
             <input
+              placeholder='mmHg'
               type="number"
               value={value3}
               onChange={handleValue3Change}
+              style={{marginBottom: '20px', width: '320px', height: '30px'}}
             />
           </label>
           <br />
-          <button onClick={compareValues}>Compare</button>
+          <button onClick={compareValues}
+          style={{padding: '8px 20px'}}>Compare</button>
         </div>
         <div className="back">
           <div>
