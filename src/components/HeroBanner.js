@@ -12,7 +12,7 @@ const HeroBanner = () => {
       <Box display='flex'
         flexDirection='row'
         sx={{ ml: 0}}>
-        <img src={heroimg} style={{ width: '40vw', height: '80vh', backgroundColor: 'transparent' }} />
+        <img src={heroimg} style={{ width: '40vw', height: '80vh', backgroundColor: 'transparent' }} alt="image"/>
         <Typography
           color='#67042a' fontWeight="600" fontSize="50px" fontFamily='Anton' alignItems='center' paddingTop='100px' display="flex" flexDirection="column" >
           <div>GET YOUR FITNESS INTO YOUR</div>
@@ -38,7 +38,7 @@ const HeroBanner = () => {
       </Stack>
       <Stack
       style={{display: 'flex',justifyContent: 'flex-end', marginTop: '50px'}}>
-        <img src={AbtUsImg1} style={{ width: '60vw', height: '80vh',paddingTop: '100px', paddingLeft: '200px', justifyContent: 'center'}}/>
+        <img src={AbtUsImg1} style={{ width: '60vw', height: '80vh',paddingTop: '100px', paddingLeft: '200px', justifyContent: 'center'}} alt="image"/>
         <Typography
         display='inline'
         color='#67042a' fontWeight="600" fontSize="26px"  fontFamily='Anton' style={{alignItems: 'center',

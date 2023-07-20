@@ -13,7 +13,7 @@ const MembershipCard = () => {
     style={{justifyContent:'center',backgroundColor: 'black', padding: '30px' }}>
       <div
       style={{backgroundColor:'hsl(180, 4%, 72%)', display: 'inline-block', padding: '5px', marginBottom: '10px' }}>
-        <img src={pricing1} style={{width: '50px', justifyContent: 'center'}}/>
+        <img src={pricing1} style={{width: '50px', justifyContent: 'center'}} alt="image"/>
         </div>
       <Typography
       style={{fontSize: '23px', fontWeight: 'bold', color: 'hsl(180, 4%, 72%)'}}
@@ -46,7 +46,7 @@ const MembershipCard = () => {
     style={{justifyContent:'center',backgroundColor: 'black', padding: '30px' }}>
       <div
       style={{backgroundColor:'hsl(180, 4%, 72%)', display: 'inline-block', padding: '5px', marginBottom: '10px' }}>
-        <img src={pricing2} style={{width: '50px', justifyContent: 'center'}}/>
+        <img src={pricing2} style={{width: '50px', justifyContent: 'center'}} alt="image"/>
         </div>
       <Typography
       style={{fontSize: '23px', fontWeight: 'bold', color: 'hsl(180, 4%, 72%)'}}
@@ -79,7 +79,7 @@ const MembershipCard = () => {
     style={{justifyContent:'center',backgroundColor: 'black', padding: '30px' }}>
       <div
       style={{backgroundColor:'hsl(180, 4%, 72%)', display: 'inline-block', padding: '5px', marginBottom: '10px' }}>
-        <img src={pricing3} style={{width: '50px', justifyContent: 'center'}}/>
+        <img src={pricing3} style={{width: '50px', justifyContent: 'center'}} alt="image"/>
         </div>
       <Typography
       style={{fontSize: '23px', fontWeight: 'bold', color: 'hsl(180, 4%, 72%)'}}

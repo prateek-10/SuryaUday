@@ -14,7 +14,7 @@ const FitnessEvaluater = () => {
           style={{ justifyContent: 'center', backgroundColor: 'white', padding: '5px 30px' }}>
           <div
             style={{ display: 'flex', justifyContent: 'center' }}>
-            <img src={cardio} style={{ width: '70px', justifyContent: 'center' }} />
+            <img src={cardio} style={{ width: '70px', justifyContent: 'center' }} alt="image"/>
           </div>
           <Typography
             display="flex"
@@ -43,7 +43,7 @@ const FitnessEvaluater = () => {
           style={{ justifyContent: 'center', backgroundColor: 'white', padding: '5px 30px' }}>
           <div
             style={{ display: 'flex', justifyContent: 'center' }}>
-            <img src={cardio} style={{ width: '70px', justifyContent: 'center' }} />
+            <img src={cardio} style={{ width: '70px', justifyContent: 'center' }} alt="image"/>
           </div>
           <Typography
             display="flex"
@@ -72,7 +72,7 @@ const FitnessEvaluater = () => {
           style={{ justifyContent: 'center', backgroundColor: 'white', padding: '5px 30px' }}>
           <div
             style={{ display: 'flex', justifyContent: 'center' }}>
-            <img src={cardio} style={{ width: '70px', justifyContent: 'center' }} />
+            <img src={cardio} style={{ width: '70px', justifyContent: 'center' }} alt="image"/>
           </div>
           <Typography
             display="flex"
@@ -101,7 +101,7 @@ const FitnessEvaluater = () => {
           style={{ justifyContent: 'center', backgroundColor: 'white', padding: '5px 30px' }}>
           <div
             style={{ display: 'flex', justifyContent: 'center' }}>
-            <img src={cardio} style={{ width: '70px', justifyContent: 'center' }} />
+            <img src={cardio} style={{ width: '70px', justifyContent: 'center' }} alt="image" />
           </div>
           <Typography
             display="flex"

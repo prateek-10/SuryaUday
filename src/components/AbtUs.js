@@ -11,7 +11,7 @@ const AbtUs = () => {
     <Stack direction="row" style={{position: 'relative', overflow: 'hidden', justifyContent: 'flex-end', margin: '20px'}}>
     <ParallaxProvider>
     <Parallax speed={-50} style={{position: 'relative'}}>
-      <img src={gym} style={{ width: '68vw', height: '80vh', backgroundColor: 'transparent'}}/>
+      <img src={gym} style={{ width: '68vw', height: '80vh', backgroundColor: 'transparent'}} alt="image"/>
     </Parallax>
     </ParallaxProvider>
     </Stack>

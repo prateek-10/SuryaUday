@@ -9,7 +9,7 @@ const Navbar = () => {
       direction="row"
       justifyContent="space-around" sx={{ gap: { sm: '280px', xs: '40px' }, mt: { sm: '10px', xs: '6px' } }} px="20px">
       <Link to="/">
-        <img src={Logo1} alt="Logo" style={{ width: '52px', height: '52px', margin: '0 0px', display: "block", alignItems: "center" }} />
+        <img src={Logo1} alt="Logo" style={{ width: '52px', height: '52px', margin: '0 0px', display: "block", alignItems: "center" }}/>
       </Link>
       <Stack
         direction="row"
