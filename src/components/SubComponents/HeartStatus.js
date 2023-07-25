@@ -28,9 +28,9 @@ function HealthStatus() {
     const range3Min = 0;
     const range3Max = 80;
 
-    if (value1 >= range1Min && value1 <= range1Max) {
+    if (value1 <= range1Max) {
       setHealthStatus1('Healthy');
-    } else if (value1 < range1Min) {
+    } else if (value1 > range1Max) {
       setHealthStatus1('Unhealthy (Below range)');
     } else {
       setHealthStatus1('Unhealthy (Above range)');
@@ -66,7 +66,7 @@ function HealthStatus() {
   };
 
   return (
-    <div className="container" style={{ marginTop: '10px', display: 'flex', direction: 'column' ,justifyContent: 'space-between'}}>
+    <div className="container" style={{width:'600px', marginTop: '20px', display: 'flex', direction: 'column' ,justifyContent: 'space-between'}}>
     <div
       className={`box ${isFlipped ? 'flipped' : ''}`}
     >
@@ -80,7 +80,7 @@ function HealthStatus() {
               type="number"
               value={value1}
               onChange={handleValue1Change}
-              style={{marginBottom: '20px', width: '320px', height: '30px'}}
+              style={{marginBottom: '20px', width: '500px', height: '30px'}}
               />
           </label>
           <br />
@@ -92,7 +92,7 @@ function HealthStatus() {
               type="number"
               value={value2}
               onChange={handleValue2Change}
-              style={{marginBottom: '20px', width: '320px', height: '30px'}}
+              style={{marginBottom: '20px', width: '500px', height: '30px'}}
             />
           </label>
           <br />
@@ -104,7 +104,7 @@ function HealthStatus() {
               type="number"
               value={value3}
               onChange={handleValue3Change}
-              style={{marginBottom: '20px', width: '320px', height: '30px'}}
+              style={{marginBottom: '20px', width: '500px', height: '30px'}}
             />
           </label>
           <br />

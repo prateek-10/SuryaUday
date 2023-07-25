@@ -7,7 +7,7 @@ import pricing3 from '../assets/icons/pricing3.png'
 const MembershipCard = () => {
   return (
    <Stack
-   style={{display: 'flex', justifyContent: 'space-around', marginTop: '0px', paddingTop: '100px', paddingBottom: '40px' }}
+   style={{display: 'flex', justifyContent: 'space-around', marginTop: '60px', paddingTop: '100px', paddingBottom: '40px' }}
    direction='row'>
     <Box
     style={{justifyContent:'center',backgroundColor: 'black', padding: '30px' }}>
