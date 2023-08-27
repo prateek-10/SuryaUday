@@ -18,7 +18,7 @@ const Navbar = () => {
         alignItems="center"
       >
         <Link to="/" style={{ textDecoration: 'none', color: '#3A1212', borderBottom: '3px solid #FF2625' }}>Home</Link>
-        <a href='#services' style={{ textDecoration: 'none', color: '#3A1212' }}>Services</a>
+        <Link to="/Services/:id" style={{ textDecoration: 'none', color: '#3A1212' }}>Services</Link>
         <a href='#Membership Details' style={{ textDecoration: 'none', color: '#3A1212' }}>Membership Details</a>
         <a href='#Contact us' style={{ textDecoration: 'none', color: '#3A1212' }}>Contact us</a>
       </Stack>

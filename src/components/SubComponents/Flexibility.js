@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { InputAdornment, IconButton, Tooltip, TextField } from '@mui/material';
 import InfoIcon from '@mui/icons-material/Info';
 
-function HealthStatus() {
-  const [value1, setValue1] = useState('');
+function Flexibility() {
+    const [value1, setValue1] = useState('');
   const [value2, setValue2] = useState('');
   const [value3, setValue3] = useState('')
   const [isFlipped, setIsFlipped] = useState(false);
@@ -115,7 +115,6 @@ function HealthStatus() {
     setHealthStatus3('');
     setIsFlipped(false);
   };
-
   return (
     <div className="container" style={{ width: '600px', marginTop: '20px', display: 'flex', direction: 'column', justifyContent: 'space-between' }}>
       <div className={`box ${isFlipped ? 'flipped' : ''}`}>
@@ -123,7 +122,7 @@ function HealthStatus() {
           <div className="front">
             <div style={{ display: 'flex', flexDirection: 'row', width: '480px', justifyContent: 'space-between' }}>
               <label style={{ fontSize: '20px' }}>
-                Time Elapsed in Step Test:
+                Measurements of Sit and Reach Test:
               </label>
               <br />
               <Tooltip title="You will need a stopwatch for this. Start the timer at the beginning of the run and note the final time in minutes after you have completed 1KM." placement="bottom">
@@ -133,7 +132,7 @@ function HealthStatus() {
               </Tooltip>
             </div>
             <input
-              placeholder="Enter the time in minutes"
+              placeholder="Enter the measurements in inches"
               type="number"
               value={value1}
               onChange={handleValue1Change}
@@ -143,7 +142,7 @@ function HealthStatus() {
             <br />
             <div style={{ display: 'flex', flexDirection: 'row', width: '480px', justifyContent: 'space-between' }}>
             <label style={{ fontSize: '20px' }}>
-              Systolic Pressure:
+              Trunk Rotation Test:
               </label>
               <br />
               <Tooltip title="You will need a stopwatch for this. Start the timer at the beginning of the run and note the final time in minutes after you have completed 1KM." placement="bottom">
@@ -153,7 +152,7 @@ function HealthStatus() {
               </Tooltip>
               </div>
               <input
-                placeholder='mmHg'
+                placeholder='Enter the measurements in inches'
                 type="number"
                 value={value2}
                 onChange={handleValue2Change}
@@ -163,7 +162,7 @@ function HealthStatus() {
             <br />
             <div style={{ display: 'flex', flexDirection: 'row', width: '480px', justifyContent: 'space-between' }}>
             <label style={{ fontSize: '20px' }}>
-              Diastolic Pressure:
+              Groin Rotation Test:
               </label>
               <br />
               <Tooltip title="You will need a stopwatch for this. Start the timer at the beginning of the run and note the final time in minutes after you have completed 1KM." placement="bottom">
@@ -173,7 +172,7 @@ function HealthStatus() {
               </Tooltip>
               </div>
               <input
-                placeholder='mmHg'
+                placeholder='Enter the measurements in inches'
                 type="number"
                 value={value3}
                 onChange={handleValue3Change}
@@ -203,9 +202,6 @@ function HealthStatus() {
       </div>
     </div>
   );
-  
-  
 }
 
-export default HealthStatus;
-
+export default Flexibility

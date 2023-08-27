@@ -1,9 +1,9 @@
 import React from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Box } from '@mui/material'
 
 import './App.css';
-import Services from './pages/Services';
+import Services from '../src/pages/Services'
 import ContactUs from './pages/ContactUs'
 import Membership from './pages/Membership';
 import SignIn from './pages/SignIn';
