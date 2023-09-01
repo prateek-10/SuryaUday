@@ -49,13 +49,13 @@ const Footer = () => {
               Products
             </Typography>
 
-            <FooterLink>Listing</FooterLink>
+            <FooterLink>Membership</FooterLink>
             <br />
-            <FooterLink>Properties</FooterLink>
+            <FooterLink>Yoga Classes</FooterLink>
             <br />
-            <FooterLink>Agents</FooterLink>
+            <FooterLink>Acess to our in-house dietician</FooterLink>
             <br />
-            <FooterLink>Blog</FooterLink>
+            <FooterLink>Exclusive fitness Blogs</FooterLink>
           </Box>
 
           <Box>
