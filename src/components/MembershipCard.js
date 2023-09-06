@@ -3,11 +3,12 @@ import { Box, Stack, Typography } from '@mui/material'
 import pricing1 from '../assets/icons/pricing1.png'
 import pricing2 from '../assets/icons/pricing2.png'
 import pricing3 from '../assets/icons/pricing3.png'
+import membershipplan from '../assets/images/Membershipplan.png'
 
 const MembershipCard = () => {
   return (
    <Stack
-   style={{display: 'flex', justifyContent: 'space-around', marginTop: '60px', paddingTop: '100px', paddingBottom: '40px' }}
+   style={{display: 'flex', justifyContent: 'space-around', marginTop: '-50px', paddingTop: '100px', paddingBottom: '40px' }}
    direction='row'>
     <Box
     style={{justifyContent:'center',backgroundColor: 'black', padding: '30px' }}>

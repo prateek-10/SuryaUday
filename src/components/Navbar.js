@@ -4,10 +4,24 @@ import { Stack } from '@mui/material'
 import Logo1 from '../assets/images/Logo1.png'
 
 const Navbar = () => {
+  const handleScrollToSection = (sectionId) => {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  };
+  const navbarStyle = {
+    position: 'sticky',
+    top: '0',
+    zIndex: '100',
+    background: 'white', // Customize the background color as needed
+  };
   return (
     <Stack
       direction="row"
-      justifyContent="space-around" sx={{ gap: { sm: '280px', xs: '40px' }, mt: { sm: '10px', xs: '6px' } }} px="20px">
+      justifyContent="space-around" sx={{ gap: { sm: '280px', xs: '40px' }, mt: { sm: '0px', xs: '6px', ...navbarStyle, padding: '5px 0px' } }} px="20px">
       <Link to="/">
         <img src={Logo1} alt="Logo" style={{ width: '52px', height: '52px', margin: '0 0px', display: "block", alignItems: "center" }}/>
       </Link>
@@ -18,9 +32,9 @@ const Navbar = () => {
         alignItems="center"
       >
         <Link to="/" style={{ textDecoration: 'none', color: '#3A1212', borderBottom: '3px solid #FF2625' }}>Home</Link>
-        <Link to="/Services/:id" style={{ textDecoration: 'none', color: '#3A1212' }}>Services</Link>
-        <a href='#Membership Details' style={{ textDecoration: 'none', color: '#3A1212' }}>Membership Details</a>
-        <a href='#Contact us' style={{ textDecoration: 'none', color: '#3A1212' }}>Contact us</a>
+        <a href="#Services" style={{ textDecoration: 'none', color: '#3A1212' }} onClick={() => handleScrollToSection('Services')}>Services</a>
+        <a href='#Membership' style={{ textDecoration: 'none', color: '#3A1212' }}>Membership Details</a>
+        <a href='#Contact' style={{ textDecoration: 'none', color: '#3A1212' }}>Contact us</a>
       </Stack>
       <Stack
         direction="row"

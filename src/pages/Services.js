@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { Box, Button, TextField, Typography, Stack } from '@mui/material'
 import { foodoptions, Fetchdata } from '../utilities/Fetchdata'
+import SERVICES from '../assets/images/SERVICES.png'
 
 const fieldMapping = {
   name: 'Food Name',
@@ -34,6 +35,11 @@ const Services = () => {
     }
   };
   return (
+    <div id="Services" style={{ height: '400px', overflowY: 'auto' }}>
+      <Stack>
+      <div style={{ display: "flex" ,justifyContent: 'center', alignItems: 'center', height: '50px'}}>
+        <img src={SERVICES} style={{height: '100px'}} />
+      </div>
     <Stack alignItems="center" mt="37px" justifyContent="center" p="20px">
       <Typography fontWeight="700" sx={{fontSize: "44px"}} mb="50px" textAlign="center">
         Track your Nutrition Intake 
@@ -71,6 +77,8 @@ const Services = () => {
         </Box>
       )}
 </Stack>
+</Stack>
+</div>
   )
 }
 

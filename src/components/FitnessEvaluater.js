@@ -8,9 +8,17 @@ import Muscle from './SubComponents/Muscle'
 import muscle from '../assets/icons/muscle.png'
 import bmi from'../assets/icons/bmi.jpg'
 import Bmi from './SubComponents/Bmi'
+import Services from '../pages/Services'
+import SERVICES from '../assets/images/SERVICES.png'
+
 
 const FitnessEvaluater = () => {
   return (
+    <Stack>
+      {/* <div style={{ display: "flex" ,justifyContent: 'center', alignItems: 'center', height: '50px'}}>
+        <img src={SERVICES} style={{height: '100px'}} />
+      </div> */}
+    <Services/>
     <Stack
       display="flex"
       direction="row"
@@ -41,6 +49,7 @@ const FitnessEvaluater = () => {
           </Typography>
           < Bmi/>
         </Box>
+      </Stack>
       </Stack>
       /* <Box
         style={{ justifyContent: 'center', backgroundColor: 'aqua', padding: '5px 30px' }}>
