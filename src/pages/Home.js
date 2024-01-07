@@ -10,8 +10,7 @@ import membershipplan from '../assets/images/Membershipplan.png'
 
 const Home = () => {
   return (
-    <Box
-    sx={{ml: '0px'}}>
+    <Box style={{backgroundColor: 'black'}}>
       <HeroBanner/>
       <AbtUs/>
       <Sponsors/>
@@ -19,7 +18,7 @@ const Home = () => {
         <img src={membershipplan} style={{height: '100px'}} />
       </div>
       <MembershipCard/>
-      <FitnessEvaluater/>
+      {/* <FitnessEvaluater/> */}
     </Box>
   )
 }

@@ -55,7 +55,7 @@ body {
 .stack-getintouch{
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 15px;
 }
 .btn{
   background-color: #00fffa;
