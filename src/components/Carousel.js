@@ -46,7 +46,7 @@ function Carousel() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1800,
+    autoplaySpeed: 3000,
     beforeChange: (current, next) => setSlideIndex(next),
     responsive: [
       {
@@ -63,8 +63,15 @@ function Carousel() {
   };
 
   return (
-    <div className="container">
-      <div className="slider">
+    <div
+      className="container"
+      style={{
+        backgroundColor: "white",
+        display: "flex",
+        flexDirection: "row",
+      }}
+    >
+      <div className="slider" style={{ width: "100vw" }}>
         <Slider
           centerMode={settings.centerMode}
           centerPadding={settings.centerPadding}
@@ -85,7 +92,15 @@ function Carousel() {
           ))}
         </Slider>
       </div>
-      <div style={{width: "100%", alignItems: "center", justifyContent:"center", display: "flex", flexDirection: "row"}}>
+      <div
+        style={{
+          width: "100%",
+          alignItems: "center",
+          justifyContent: "center",
+          display: "flex",
+          flexDirection: "row",
+        }}
+      >
         <div
           className="arrow custom-prev-arrow"
           onClick={() => setSlideIndex(slideIndex - 1)}
