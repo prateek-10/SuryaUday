@@ -140,10 +140,24 @@ const HeroBanner = () => {
             marginTop: "-70px",
           }}
         >
-          <h2 style={{ fontWeight: "450", fontSize: "55px" }}>
+          <h2
+            style={{
+              fontWeight: "450",
+              fontSize: "55px",
+              color: "black",
+              textShadow: "-3px 3px 3px rgba(0, 0, 0, 0.5)",
+              animation: "glow 3s infinite alternate",
+              fontFamily: "Inter",
+            }}
+          >
             EVERY JOURNEY HAS A STARTING
           </h2>
-          <p fontWeight="100" fontSize="15px" style={{ margin: "0px" }}>
+          <Typography
+            fontWeight="450"
+            fontSize="17px"
+            style={{ margin: "0px" }}
+            fontFamily="Inter"
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Pellentesque accumsan facilisis aliquet. Suspendisse rutrum
             hendrerit fringilla.
@@ -151,7 +165,7 @@ const HeroBanner = () => {
             Nam ut diam sed lorem rutrum tincidunt non vel justo. Nunc urna
             magna, mollis non felis vel, pellentesque commodo diam. In eu mauris
             nisi.
-          </p>
+          </Typography>
         </Typography>
         <img
           src={AbtUsImg1}
@@ -185,8 +199,9 @@ const HeroBanner = () => {
           <h2
             style={{
               fontWeight: "450",
-              fontSize: "55px",
+              fontSize: "60px",
               textShadow: "-0px 4px 4px rgba(0, 0, 0, 0.5)",
+              fontFamily: "Protest Guerrilla",
             }}
           >
             ABOUT US
@@ -215,22 +230,45 @@ const HeroBanner = () => {
           href="#Register"
           style={{
             textDecoration: "none",
-            color: "#3A1212",
-            marginTop: "-115px",
+            color: "#BEE1E6",
+            marginTop: "-109px",
             marginLeft: "790px",
             zIndex: "120",
+            display: "flex",
+            flexDirection: "column",
+            transform: "translateX(8.7%)",
           }}
         >
           <button
             className="btn"
             style={{
               color: "black",
-              fontFamily: "Josefin Sans",
-              fontSize: "20px",
-              padding: "25px 80px",
+              fontFamily: "Inter",
+              fontSize: "22px",
+              fontWeight: "normal",
+              padding: "22px 0px",
               cursor: "pointer",
               borderStyle: "none",
               zIndex: "120",
+              width: "220px",
+              boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.5)",
+            }}
+          >
+            Know More
+          </button>
+          <button
+            style={{
+              color: "black",
+              backgroundColor: "#FF8EC7",
+              fontFamily: "Josefin Sans",
+              fontSize: "20px",
+              padding: "12px 75px",
+              cursor: "pointer",
+              borderStyle: "none",
+              zIndex: "110",
+              width: "217px",
+              margin: "-62px 0px 0px 9px",
+              boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.5)",
             }}
           >
             Know More

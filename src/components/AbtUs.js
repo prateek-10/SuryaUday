@@ -6,11 +6,30 @@ import gym from "../assets/images/gym.jpg";
 const AbtUs = () => {
   return (
     <Stack>
-      <Typography style={{ textAlign: "center" }}>
-        <h2 style={{ fontWeight: "600", fontSize: "50px" }}>ABOUT US</h2>
-        <p fontWeight="100" fontSize="15px" style={{ margin: "10px" }}>
+      <Typography
+        style={{
+          textAlign: "center",
+          marginTop: "150px",
+        }}
+      >
+        <h2
+          style={{
+            fontWeight: "450",
+            fontSize: "55px",
+            color: "black",
+            textShadow: "-3px 3px 3px rgba(0, 0, 0, 0.5)",
+            animation: "glow 3s infinite alternate",
+            fontFamily: "Inter",
+          }}
+        >
+          EXPLORE OUR PRACTICES AND LEGACY
+        </h2>
+        <p fontWeight="100" fontSize="15px" style={{ margin: "0px" }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
           accumsan facilisis aliquet. Suspendisse rutrum hendrerit fringilla.
+          <br />
+          Nam ut diam sed lorem rutrum tincidunt non vel justo. Nunc urna magna,
+          mollis non felis vel, pellentesque commodo diam. In eu mauris nisi.
         </p>
       </Typography>
       <Stack style={{ position: "relative" }}>
@@ -20,8 +39,8 @@ const AbtUs = () => {
             position: "relative",
             overflow: "hidden",
             justifyContent: "flex-end",
-            margin: "20px",
-            marginTop: "140px",
+            marginRight: "100px",
+            marginTop: "70px",
           }}
         >
           <ParallaxProvider>
