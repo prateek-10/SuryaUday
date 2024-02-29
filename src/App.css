@@ -63,6 +63,12 @@ body {
 .btn:hover {
   background-color: #17ff8a;
 }
+.btn1 {
+  background-color: #bee1e6;
+}
+.btn1:hover {
+  background-color: #a4b28c;
+}
 .container {
   background-color: aqua;
 }

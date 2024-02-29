@@ -208,7 +208,7 @@ const HeroBanner = () => {
           </h2>
           <p
             fontWeight="100"
-            fontSize="30px"
+            fontSize="20px"
             style={{ margin: "20px 10px 30px 10px" }}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.

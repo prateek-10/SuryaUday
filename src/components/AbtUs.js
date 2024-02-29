@@ -9,7 +9,7 @@ const AbtUs = () => {
       <Typography
         style={{
           textAlign: "center",
-          marginTop: "150px",
+          marginTop: "115px",
         }}
       >
         <h2
@@ -39,8 +39,8 @@ const AbtUs = () => {
             position: "relative",
             overflow: "hidden",
             justifyContent: "flex-end",
-            marginRight: "100px",
-            marginTop: "70px",
+            marginRight: "110px",
+            marginTop: "90px",
           }}
         >
           <ParallaxProvider>
@@ -66,16 +66,31 @@ const AbtUs = () => {
             justifyContent: "center",
             textAlign: "center",
             padding: "30px",
-            backgroundColor: "yellow",
+            backgroundColor: "#a4b28c",
             width: "800px",
             marginTop: "350px",
-            marginLeft: "200px",
-            height: "450px",
+            marginLeft: "110px",
+            height: "420px",
             position: "absolute",
           }}
         >
-          <h2 style={{ fontWeight: "600", fontSize: "60px" }}>FEATURES</h2>
-          <p fontWeight="100" fontSize="15px" style={{ margin: "10px" }}>
+          <h2
+            style={{
+              fontWeight: "600",
+              fontSize: "60px",
+              fontFamily: "Protest Guerrilla",
+            }}
+          >
+            FEATURES
+          </h2>
+          <p
+            style={{
+              margin: "10px",
+              fontFamily: "Inter",
+              fontWeight: "400",
+              fontSize: "1rem",
+            }}
+          >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Pellentesque accumsan facilisis aliquet. Suspendisse rutrum
             hendrerit fringilla. Nam ut diam sed lorem rutrum tincidunt non vel
@@ -87,6 +102,53 @@ const AbtUs = () => {
             diam porta vestibulum.
           </p>
         </Typography>
+        <a
+          href="#Register"
+          style={{
+            textDecoration: "none",
+            color: "#BEE1E6",
+            marginTop: "-20px",
+            marginLeft: "405px",
+            zIndex: "120",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          <button
+            className="btn1"
+            style={{
+              color: "black",
+              fontFamily: "Inter",
+              fontSize: "22px",
+              fontWeight: "normal",
+              padding: "22px 0px",
+              cursor: "pointer",
+              borderStyle: "none",
+              zIndex: "120",
+              width: "220px",
+              boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.5)",
+            }}
+          >
+            Our Services
+          </button>
+          <button
+            style={{
+              color: "black",
+              backgroundColor: "#FF8EC7",
+              fontFamily: "Josefin Sans",
+              fontSize: "20px",
+              padding: "12px 75px",
+              cursor: "pointer",
+              borderStyle: "none",
+              zIndex: "110",
+              width: "217px",
+              margin: "-62px 0px 0px 9px",
+              boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.5)",
+            }}
+          >
+            Know More
+          </button>
+        </a>
       </Stack>
     </Stack>
   );

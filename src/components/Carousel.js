@@ -1,126 +1,83 @@
-import React, { useState } from "react";
+import { Container, Box, Typography, Button } from "@mui/material";
 import Slider from "react-slick";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import { aboutcontent } from "../data/AboutUs";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../style/Carousel.css";
+import { useState } from "react";
 
-function CustomPrevArrow({ onClick }) {
-  return (
-    <div
-      className="arrow custom-prev-arrow"
-      onClick={onClick}
-      onKeyDown={onClick}
-      role="button"
-      tabIndex={0}
-    >
-      <span className="material-symbols-outlined">arrow_back_ios_new</span>
-    </div>
-  );
-}
-
-function CustomNextArrow({ onClick }) {
-  return (
-    <div
-      className="arrow custom-next-arrow"
-      onClick={onClick}
-      onKeyDown={onClick}
-      role="button"
-      tabIndex={0}
-    >
-      <span className="material-symbols-outlined">arrow_forward_ios</span>
-    </div>
-  );
-}
-
-function Carousel() {
-  const [slideIndex, setSlideIndex] = useState(0);
-
-  const settings = {
+export default function Carousel() {
+  const [settings] = useState({
+    dots: true,
     infinite: true,
-    speed: 1200,
-    centerMode: true,
-    centerPadding: "0px",
+    speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    beforeChange: (current, next) => setSlideIndex(next),
-    responsive: [
-      {
-        breakpoint: 491,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: false,
-          prevArrow: <CustomPrevArrow />,
-          nextArrow: <CustomNextArrow />,
-        },
-      },
-    ],
-  };
+  });
+
+  const data = [
+    {
+      name: `John Morgan`,
+      img: "https://res.cloudinary.com/dtrhvhmj8/image/upload/v1709218643/portrait-handsome-bearded-man_famqrf.jpg",
+      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    },
+    {
+      name: `Ellie Anderson`,
+      img: "https://res.cloudinary.com/dtrhvhmj8/image/upload/v1709218643/woman-looking-camera-smiling-waving-with-stars-american-flag_pjk2v8.jpg",
+      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    },
+    {
+      name: `Nia Adebayo`,
+      img: "https://res.cloudinary.com/dtrhvhmj8/image/upload/v1709218645/portrait-handsome-african-man_cdoc64.jpg",
+      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    },
+    {
+      name: `Rigo Louie`,
+      img: "https://res.cloudinary.com/dtrhvhmj8/image/upload/v1709217948/portrait-asian-teen-boy-with-glasses_yklota.jpg",
+      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    },
+    {
+      name: `Mia Williams`,
+      img: "https://res.cloudinary.com/dtrhvhmj8/image/upload/v1709217954/skilful-cute-asian-girl-feel-confident-applying-new-job-after-graduating-cross-hands-chest-like-professional-smiling-easy-dealing-with-job-tasks-standing-white-background-copy-space_rwibt2.jpg",
+      review: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`,
+    },
+  ];
 
   return (
-    <div
-      className="container"
-      style={{
-        backgroundColor: "white",
-        display: "flex",
-        flexDirection: "row",
-      }}
-    >
-      <div className="slider" style={{ width: "100vw" }}>
-        <Slider
-          centerMode={settings.centerMode}
-          centerPadding={settings.centerPadding}
-          slidesToShow={settings.slidesToShow}
-          slidesToScroll={settings.slidesToScroll}
-          autoplay={settings.autoplay}
-          autoplaySpeed={settings.autoplaySpeed}
-          beforeChange={settings.beforeChange}
-          responsive={settings.responsive}
-        >
-          {aboutcontent.carouselImages.map((imgUrl, index) => (
-            <div
-              className={index === slideIndex ? "slide slide-active" : "slide"}
-              key={imgUrl}
-            >
-              <img className="carousel-img" src={imgUrl} alt={`Alt ${index}`} />
-            </div>
+    <Container maxWidth="lg">
+      <Box mt={20}>
+        <Slider {...settings}>
+          {data.map((d) => (
+            <Box key={d.name} sx={{ height: 450 }} elevation={3}>
+              <Box
+                sx={{
+                  height: 204,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  borderRadius: "0 0 16px 16px",
+                }}
+              >
+                <img
+                  src={d.img}
+                  alt="ProfilePic"
+                  style={{ width: 220, height: 200, borderRadius: "50%" }}
+                />
+              </Box>
+              <Box
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+                justifyContent="center"
+                gap={4}
+                p={4}
+              >
+                <Typography>{d.name}</Typography>
+                <Typography>{d.review}</Typography>
+                <Button>Read More</Button>
+              </Box>
+            </Box>
           ))}
         </Slider>
-      </div>
-      <div
-        style={{
-          width: "100%",
-          alignItems: "center",
-          justifyContent: "center",
-          display: "flex",
-          flexDirection: "row",
-        }}
-      >
-        <div
-          className="arrow custom-prev-arrow"
-          onClick={() => setSlideIndex(slideIndex - 1)}
-          role="button"
-          tabIndex={0}
-        >
-          <ArrowBackIosNewIcon />
-        </div>
-        <div
-          style={{ alignItems: "flex-end" }}
-          className="arrow custom-next-arrow"
-          onClick={() => setSlideIndex(slideIndex + 1)}
-          role="button"
-          tabIndex={0}
-        >
-          <ArrowForwardIosIcon />
-        </div>
-      </div>
-    </div>
+      </Box>
+    </Container>
   );
 }
-
-export default Carousel;
