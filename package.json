@@ -11,6 +11,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "embla-carousel-react": "^8.0.0",
+    "framer-motion": "^11.0.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-horizontal-scrolling-menu": "^2.7.1",
@@ -20,7 +21,7 @@
     "react-scroll-parallax": "3.4.2",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
-    "tailwind-merge": "^2.2.1",
+    "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7"
   },
   "scripts": {
@@ -51,6 +52,9 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "autoprefixer": "^10.4.18",
+    "postcss": "^8.4.37",
+    "tailwindcss": "^3.4.1"
   }
 }

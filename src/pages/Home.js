@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material";
 
 import HeroBanner from "../components/HeroBanner";
 import AbtUs from "../components/AbtUs";
-import Sponsors from "../components/Sponsors";
+// import Ticker from "../components/Sponsors/Ticker";
 import MembershipCard from "../components/MembershipCard";
 import FitnessEvaluater from "../components/FitnessEvaluater";
 import membershipplan from "../assets/images/Membershipplan.png";
@@ -13,9 +13,9 @@ const Home = () => {
   return (
     <Box style={{ backgroundColor: "white" }}>
       <HeroBanner />
+      {/* <Ticker /> */}
       <AbtUs />
       <Carousel />;
-      <Sponsors />
       <div
         style={{
           display: "flex",
