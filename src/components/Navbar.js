@@ -123,7 +123,7 @@ const Navbar = () => {
         {/* <a href="#Login" style={linkStyle}>
           Sign In
         </a> */}
-        <a href="#Register" style={linkStyle}>
+        <Link to="/Register" style={linkStyle}>
           <button
             style={{
               backgroundColor: "#17FF8A",
@@ -147,7 +147,7 @@ const Navbar = () => {
               style={{ height: "25px", width: "25px", marginTop: "3px" }}
             ></img> */}
           </button>
-        </a>
+        </Link>
       </Stack>
     </Stack>
   );

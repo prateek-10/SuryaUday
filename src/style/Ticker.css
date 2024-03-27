@@ -1,0 +1,48 @@
+/* body {
+  font-family: system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #131722;
+  background-color: #f7f8fd;
+  padding: 100px 50px;
+} */
+
+h1 {
+  text-align: center;
+  margin-block-end: 2.5rem;
+  margin-top: -90px;
+}
+
+.stock-ticker {
+  font-size: 15px;
+  padding-block: 8px;
+  /* border-block: 1px solid; */
+  overflow: hidden;
+  user-select: none;
+  margin-top: 60px;
+  --gap: 70px;
+  margin-left: 115px;
+  width: 85%; /* Make sure container stretches across the viewport */
+  white-space: nowrap; /* Allow list items to be in a single line */
+}
+
+.stock-ticker img {
+  filter: grayscale(70%);
+}
+
+.stock-ticker ul {
+  list-style: none;
+  display: inline-flex; /* Use inline-flex to have items in a single line */
+  gap: var(--gap);
+  animation: scroll 70s linear infinite;
+}
+
+.stock-ticker:hover ul {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-100%);
+  }
+}

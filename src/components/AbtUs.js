@@ -15,11 +15,11 @@ const AbtUs = () => {
         <h2
           style={{
             fontWeight: "450",
-            fontSize: "55px",
+            fontSize: "70px",
             color: "black",
             textShadow: "-3px 3px 3px rgba(0, 0, 0, 0.5)",
             animation: "glow 3s infinite alternate",
-            fontFamily: "Inter",
+            fontFamily: "Protest Guerrilla",
           }}
         >
           EXPLORE OUR PRACTICES AND LEGACY

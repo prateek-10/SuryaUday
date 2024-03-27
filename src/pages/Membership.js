@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const Membership = () => {
-  return (
-    <div>Membership</div>
-  )
-}
+const Subscribe = () => {
+  return <div>Membership</div>;
+};
 
-export default Membership
+export default Subscribe;
