@@ -24,13 +24,16 @@ const Register = () => {
 
   const handleSignup = async () => {
     try {
-      const response = await fetch("http://localhost:5000/user/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://suryauday-backend.onrender.com/user/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
       const result = await response.json();
       console.log(result);
       navigate("/login"); // Navigate to login page after successful signup
