@@ -66,10 +66,10 @@ body {
 }
 
 .forgot-password {
-  padding-left: 62px;
-  margin-top: 27px;
+  padding-left: 113px;
+  margin-top: -10px;
   color: #797979;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .forgot-password span {
@@ -80,7 +80,7 @@ body {
 .submit-container {
   display: flex;
   gap: 30px;
-  margin: 50px auto;
+  margin: 40px auto;
 }
 
 .submit {

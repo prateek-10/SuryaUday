@@ -11,6 +11,8 @@ import Register from "./pages/Register";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Login from "./pages/Login";
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
   return (
@@ -21,7 +23,8 @@ const App = () => {
         <Route path="/Services/:id" element={<Services />} />
         <Route path="/Membership/:id" element={<Membership />} />
         <Route path="/ContactUs/:id" element={<ContactUs />} />
-        {/* <Route path="/SignIn/:id" element={<SignIn />} /> */}
+        <Route path="/Login" element={<Login />} />
+        <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Register" element={<Register />} />
       </Routes>
       <Footer />

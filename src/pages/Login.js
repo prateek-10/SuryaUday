@@ -1,15 +1,12 @@
 import React, { useState } from "react";
-import user_icon from "../assets/images/Assets/person.png";
-import "../style/Register.css";
-import { useNavigate } from "react-router-dom";
 import email_icon from "../assets/images/Assets/email.png";
 import password_icon from "../assets/images/Assets/password.png";
-import Login from "./Login";
+import "../style/Register.css";
+import { useNavigate } from "react-router-dom";
 
-const Register = () => {
+const Login = () => {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    name: "",
     email: "",
     password: "",
   });
@@ -22,9 +19,9 @@ const Register = () => {
     });
   };
 
-  const handleSignup = async () => {
+  const handleLogin = async () => {
     try {
-      const response = await fetch("http://localhost:5000/user/register", {
+      const response = await fetch("http://localhost:5000/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -32,14 +29,14 @@ const Register = () => {
         body: JSON.stringify(formData),
       });
       const result = await response.json();
+      localStorage.setItem("token", result.token);
       console.log(result);
-      navigate("/login"); // Navigate to login page after successful signup
+      navigate("/Dashboard"); // Example navigation to dashboard
     } catch (error) {
       console.error(error.message);
     } finally {
       setFormData({
         email: "",
-        name: "",
         password: "",
       });
     }
@@ -48,20 +45,10 @@ const Register = () => {
   return (
     <div className="container">
       <div className="header">
-        <div className="text">Sign Up</div>
+        <div className="text">Login</div>
         <div className="underline"></div>
       </div>
       <form className="inputs" onSubmit={(e) => e.preventDefault()}>
-        <div className="input">
-          <img src={user_icon} alt="" />
-          <input
-            type="text"
-            name="name"
-            placeholder="Name"
-            value={formData.name}
-            onChange={handleInputChange}
-          />
-        </div>
         <div className="input">
           <img src={email_icon} alt="" />
           <input
@@ -84,22 +71,12 @@ const Register = () => {
         </div>
       </form>
       <div className="submit-container">
-        <div className="submit" onClick={handleSignup}>
-          Sign Up
-        </div>
-      </div>
-      <div className="forgot-password">
-        Already have an account?&nbsp;
-        <span
-          onClick={() => {
-            navigate("/Login"); // Navigate to login page
-          }}
-        >
+        <div className="submit" onClick={handleLogin}>
           Login
-        </span>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Register;
+export default Login;
