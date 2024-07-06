@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, RouterProvider } from "react-router-dom";
 import { Box } from "@mui/material";
 
 import "./App.css";
-import Services from "../src/pages/Services";
+import Services from "./pages/Services";
 import ContactUs from "./pages/ContactUs";
 import Membership from "./pages/Membership";
 // import SignIn from "./pages/SignIn";
@@ -20,9 +20,9 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Services/:id" element={<Services />} />
-        <Route path="/Membership/:id" element={<Membership />} />
-        <Route path="/ContactUs/:id" element={<ContactUs />} />
+        <Route path="/Services" element={<Services />} />
+        <Route path="/Membership" element={<Membership />} />
+        <Route path="/ContactUs" element={<ContactUs />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Register" element={<Register />} />

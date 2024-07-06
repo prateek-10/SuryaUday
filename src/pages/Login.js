@@ -10,6 +10,7 @@ const Login = () => {
     email: "",
     password: "",
   });
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -17,6 +18,7 @@ const Login = () => {
       ...formData,
       [name]: value,
     });
+    setErrorMessage(""); // Clear error message when user starts typing
   };
 
   const handleLogin = async () => {
@@ -31,12 +33,21 @@ const Login = () => {
           body: JSON.stringify(formData),
         }
       );
+
       const result = await response.json();
-      localStorage.setItem("token", result.token);
-      console.log(result);
-      navigate("/Dashboard"); // Example navigation to dashboard
+
+      if (response.ok) {
+        // Only store the token and navigate if the login was successful
+        localStorage.setItem("token", result.token);
+        console.log(result);
+        navigate("/Dashboard"); // Example navigation to dashboard
+      } else {
+        // Display error message from the server
+        setErrorMessage(result.message || "Login failed. Please try again.");
+      }
     } catch (error) {
       console.error(error.message);
+      setErrorMessage("An error occurred. Please try again.");
     } finally {
       setFormData({
         email: "",
@@ -72,6 +83,19 @@ const Login = () => {
             onChange={handleInputChange}
           />
         </div>
+        {errorMessage && (
+          <div
+            style={{
+              color: "red",
+              position: "relative",
+              marginTop: "-15px",
+              fontSize: "15px",
+              paddingLeft: "40px",
+            }}
+          >
+            {errorMessage}
+          </div>
+        )}
       </form>
       <div className="submit-container">
         <div className="submit" onClick={handleLogin}>
