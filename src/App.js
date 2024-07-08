@@ -6,7 +6,7 @@ import "./App.css";
 import Services from "./pages/Services";
 import ContactUs from "./pages/ContactUs";
 import Membership from "./pages/Membership";
-// import SignIn from "./pages/SignIn";
+import SignIn from "./pages/SignIn";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
