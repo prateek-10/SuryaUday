@@ -70,7 +70,7 @@ const Navbar = () => {
                   width: "52px",
                   height: "52px",
                   margin: "0 0px",
-                  display: "block",
+                  display: "block", //set display block
                   alignItems: "center",
                 }}
               />
