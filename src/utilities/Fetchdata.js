@@ -4,7 +4,7 @@ export const foodoptions = {
     "X-Api-Key": "hrmzeA25L5cVsF0nEU1ylQ==xbkUsTHtzxtmPhFK",
   },
 };
-
+//option to fetch data
 export const Fetchdata = async (url, options) => {
   const response = await fetch(url, options);
   const data = await response.json();
