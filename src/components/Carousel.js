@@ -10,7 +10,7 @@ export default function Carousel() {
   const [settings] = useState({
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 510,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
